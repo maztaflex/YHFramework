@@ -1,23 +1,27 @@
 //
-//  ViewController.m
+//  YHDYoutubeViewController.m
 //  YHFramework
 //
 //  Created by DEV_TEAM1_IOS on 2016. 4. 12..
 //  Copyright © 2016년 DoozerStage. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "YHDYoutubeViewController.h"
 #import <XCDYouTubeKit/XCDYouTubeKit.h>
+#import <YTPlayerView.h>
 
-@interface ViewController ()
+@interface YHDYoutubeViewController ()
+
+@property (weak, nonatomic) IBOutlet YTPlayerView *playerView;
 
 @end
 
-@implementation ViewController
+@implementation YHDYoutubeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.playerView loadWithVideoId:@"9bZkp7q19f0"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,4 +53,5 @@
         LogRed(@"error : %@",error);
     }
 }
+
 @end

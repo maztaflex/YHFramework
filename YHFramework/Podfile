@@ -12,6 +12,8 @@ pod 'iOS-Slide-Menu'
 pod 'PureLayout'
 pod 'GoogleMaps'
 pod 'Google/Analytics'
+pod 'XCDYouTubeKit', '~> 2.5'
+pod 'youtube-ios-player-helper', '~> 0.1.6'
 
 target 'YHFramework' do
 

@@ -31,6 +31,8 @@
 		AC67B40B1CBCBAFF0015A78D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC67B4091CBCBAFF0015A78D /* LaunchScreen.storyboard */; };
 		AC67B4161CBCBAFF0015A78D /* YHFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC67B4151CBCBAFF0015A78D /* YHFrameworkTests.m */; };
 		AC67B4211CBCBAFF0015A78D /* YHFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC67B4201CBCBAFF0015A78D /* YHFrameworkUITests.m */; };
+		ACF3210A1CBCE1140025E28C /* YHDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF321091CBCE1140025E28C /* YHDTableViewController.m */; };
+		ACF3210D1CBCEBEC0025E28C /* YHDYoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF3210C1CBCEBEC0025E28C /* YHDYoutubeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,10 @@
 		AC67B41C1CBCBAFF0015A78D /* YHFrameworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YHFrameworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC67B4201CBCBAFF0015A78D /* YHFrameworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YHFrameworkUITests.m; sourceTree = "<group>"; };
 		AC67B4221CBCBAFF0015A78D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF321081CBCE1140025E28C /* YHDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDTableViewController.h; sourceTree = "<group>"; };
+		ACF321091CBCE1140025E28C /* YHDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDTableViewController.m; sourceTree = "<group>"; };
+		ACF3210B1CBCEBEC0025E28C /* YHDYoutubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDYoutubeViewController.h; sourceTree = "<group>"; };
+		ACF3210C1CBCEBEC0025E28C /* YHDYoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDYoutubeViewController.m; sourceTree = "<group>"; };
 		E9A1A2F2065A5D5CECECB7F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1172561CBCD04E00B97A98 /* YHFramework */,
+				ACF321071CBCE0C60025E28C /* Demo */,
 				AC67B3FE1CBCBAFF0015A78D /* AppDelegate.h */,
 				AC67B3FF1CBCBAFF0015A78D /* AppDelegate.m */,
 				AC67B4011CBCBAFF0015A78D /* ViewController.h */,
@@ -282,6 +289,17 @@
 				AC67B4221CBCBAFF0015A78D /* Info.plist */,
 			);
 			path = YHFrameworkUITests;
+			sourceTree = "<group>";
+		};
+		ACF321071CBCE0C60025E28C /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				ACF321081CBCE1140025E28C /* YHDTableViewController.h */,
+				ACF321091CBCE1140025E28C /* YHDTableViewController.m */,
+				ACF3210B1CBCEBEC0025E28C /* YHDYoutubeViewController.h */,
+				ACF3210C1CBCEBEC0025E28C /* YHDYoutubeViewController.m */,
+			);
+			name = Demo;
 			sourceTree = "<group>";
 		};
 		AF0F19B8D9801141BAC631F9 /* Pods */ = {
@@ -484,12 +502,14 @@
 				AC1172811CBCD04E00B97A98 /* YHPushModel.m in Sources */,
 				AC1172881CBCD04E00B97A98 /* YHView.m in Sources */,
 				AC11727D1CBCD04E00B97A98 /* YHViewController.m in Sources */,
+				ACF3210A1CBCE1140025E28C /* YHDTableViewController.m in Sources */,
 				AC67B4001CBCBAFF0015A78D /* AppDelegate.m in Sources */,
 				AC67B3FD1CBCBAFF0015A78D /* main.m in Sources */,
 				AC11728B1CBCD04E00B97A98 /* YHHTTPClient.m in Sources */,
 				AC1172891CBCD04E00B97A98 /* YHWKWebView.m in Sources */,
 				AC11728C1CBCD04E00B97A98 /* YHTools.m in Sources */,
 				AC1172851CBCD04E00B97A98 /* YHInfiniteScrollView.m in Sources */,
+				ACF3210D1CBCEBEC0025E28C /* YHDYoutubeViewController.m in Sources */,
 				AC1172801CBCD04E00B97A98 /* YHModel.m in Sources */,
 				AC11727E1CBCD04E00B97A98 /* YHBarcode.m in Sources */,
 			);
@@ -640,6 +660,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doozerstage.YHFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -653,6 +674,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doozerstage.YHFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
