@@ -1,7 +1,7 @@
 YHFramework
 ========================
 
-## Required Cocospods Library
+## CocosPods Library
 ```
 pod 'AFNetworking', '~> 2.6.0'
 pod 'GBInfiniteScrollView'
