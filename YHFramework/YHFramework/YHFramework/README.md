@@ -6,7 +6,21 @@ pod 'AFNetworking', '~> 2.6.0'
 pod 'GBInfiniteScrollView'
 pod 'SDWebImage'
 pod 'MONActivityIndicatorView'
+pod 'ZXingObjC'
+pod 'Fabric'
+pod 'Crashlytics'
+pod 'MarqueeLabel'
+pod 'iOS-Slide-Menu'
 pod 'PureLayout'
+pod 'GoogleMaps'
+pod 'Google/Analytics'
+
+## 신규 프로젝트 적용 방법
+1. YHFramework_PrefixHeader.pch 파일 복사 하여 해당 프로젝트에 추가
+2. Build Setting -> 'prefix' 검색 -> Prefix Header 항목에 ${SRCROOT}/${PROJECT_NAME}/YHFramework_PrefixHeader.pch 입력
+3. Podfile 생성후(pod init) 위 필수 pod 라이브러리 추가 및 설치 
+4. /YHFramework 폴드 전체 해당 프로젝트에 복사
+
 
 ## 주의 사항
 - YHTools.h 를 제외한 모든 클래스는 Subclassing 통해 사용
