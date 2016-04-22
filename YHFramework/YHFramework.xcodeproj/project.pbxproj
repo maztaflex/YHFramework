@@ -23,6 +23,7 @@
 		AC1172891CBCD04E00B97A98 /* YHWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1172731CBCD04E00B97A98 /* YHWKWebView.m */; };
 		AC11728B1CBCD04E00B97A98 /* YHHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AC11727A1CBCD04E00B97A98 /* YHHTTPClient.m */; };
 		AC11728C1CBCD04E00B97A98 /* YHTools.m in Sources */ = {isa = PBXBuildFile; fileRef = AC11727C1CBCD04E00B97A98 /* YHTools.m */; };
+		AC24278B1CC9CD1400EAEE63 /* YHDURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC24278A1CC9CD1400EAEE63 /* YHDURLSessionViewController.m */; };
 		AC67B3FD1CBCBAFF0015A78D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC67B3FC1CBCBAFF0015A78D /* main.m */; };
 		AC67B4001CBCBAFF0015A78D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC67B3FF1CBCBAFF0015A78D /* AppDelegate.m */; };
 		AC67B4031CBCBAFF0015A78D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC67B4021CBCBAFF0015A78D /* ViewController.m */; };
@@ -88,6 +89,8 @@
 		AC11727B1CBCD04E00B97A98 /* YHTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTools.h; sourceTree = "<group>"; };
 		AC11727C1CBCD04E00B97A98 /* YHTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTools.m; sourceTree = "<group>"; };
 		AC11728D1CBCD06A00B97A98 /* YHFramework_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YHFramework_PrefixHeader.pch; sourceTree = "<group>"; };
+		AC2427891CC9CD1400EAEE63 /* YHDURLSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDURLSessionViewController.h; sourceTree = "<group>"; };
+		AC24278A1CC9CD1400EAEE63 /* YHDURLSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDURLSessionViewController.m; sourceTree = "<group>"; };
 		AC67B3F81CBCBAFF0015A78D /* YHFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC67B3FC1CBCBAFF0015A78D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC67B3FE1CBCBAFF0015A78D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 				ACF321091CBCE1140025E28C /* YHDTableViewController.m */,
 				ACF3210B1CBCEBEC0025E28C /* YHDYoutubeViewController.h */,
 				ACF3210C1CBCEBEC0025E28C /* YHDYoutubeViewController.m */,
+				AC2427891CC9CD1400EAEE63 /* YHDURLSessionViewController.h */,
+				AC24278A1CC9CD1400EAEE63 /* YHDURLSessionViewController.m */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				AC11727D1CBCD04E00B97A98 /* YHViewController.m in Sources */,
 				ACF3210A1CBCE1140025E28C /* YHDTableViewController.m in Sources */,
 				AC67B4001CBCBAFF0015A78D /* AppDelegate.m in Sources */,
+				AC24278B1CC9CD1400EAEE63 /* YHDURLSessionViewController.m in Sources */,
 				AC67B3FD1CBCBAFF0015A78D /* main.m in Sources */,
 				AC11728B1CBCD04E00B97A98 /* YHHTTPClient.m in Sources */,
 				AC1172891CBCD04E00B97A98 /* YHWKWebView.m in Sources */,

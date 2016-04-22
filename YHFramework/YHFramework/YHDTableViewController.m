@@ -7,15 +7,18 @@
 //
 
 #import "YHDTableViewController.h"
+#import "YHViewController.h"
 
-#define YHDMenuListCount                                        1
+#define YHDMenuListCount                                        2
 
 #define YHDSegueIdMainToYoutubeModal                            @"sgMainToYoutubeModal"
+#define YHDSequeIdMainToURLSessionTask                          @"sgMainToURLSesstionTask"
 
 typedef NS_ENUM(NSInteger, YHDMenuType)
 {
 //    YHDMenuType_XCDYouTubeKit = 0,
     YHDMenuType_YTPlayerView = 0,
+    YHDMenuType_URLSessionTask,
 };
 
 @interface YHDTableViewController ()
@@ -42,15 +45,19 @@ typedef NS_ENUM(NSInteger, YHDMenuType)
     NSInteger indexRow = indexPath.row;
     
     YHDMenuType menuType = indexRow;
-    
+    NSString *segueId = nil;
     switch (menuType) {
         case YHDMenuType_YTPlayerView:
-            [self performSegueWithIdentifier:YHDSegueIdMainToYoutubeModal sender:self];
+            segueId = YHDSegueIdMainToYoutubeModal;
             break;
-            
+        case YHDMenuType_URLSessionTask:
+            segueId = YHDSequeIdMainToURLSessionTask;
+            break;
         default:
             break;
     }
+    
+    [self performSegueWithIdentifier:segueId sender:self];
     
     LogGreen(@"didSelect : %@",[self getMenuTitleWithType:menuType]);
     
@@ -97,12 +104,16 @@ typedef NS_ENUM(NSInteger, YHDMenuType)
         case YHDMenuType_YTPlayerView:
             result = @"YTPlayerView";
             break;
+        case YHDMenuType_URLSessionTask:
+            result = @"URLSessionTask";
+            break;
         default:
             break;
     }
     
     return result;
 }
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
