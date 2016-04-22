@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     LogGreen(@"Start!");
+
     return YES;
 }
 
@@ -43,4 +44,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+//{
+//    LogGreen(@"self.isPlayingVideo : %zd",self.isPlayingVideo);
+//    
+//    if (self.isPlayingVideo) {
+//        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
+//    } else {
+//        return UIInterfaceOrientationMaskPortrait;
+//    }
+//}
 @end

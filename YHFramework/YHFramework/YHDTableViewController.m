@@ -8,14 +8,14 @@
 
 #import "YHDTableViewController.h"
 
-#define YHDMenuListCount                                        2
+#define YHDMenuListCount                                        1
 
 #define YHDSegueIdMainToYoutubeModal                            @"sgMainToYoutubeModal"
 
 typedef NS_ENUM(NSInteger, YHDMenuType)
 {
-    YHDMenuType_XCDYouTubeKit = 0,
-    YHDMenuType_YTPlayerView,
+//    YHDMenuType_XCDYouTubeKit = 0,
+    YHDMenuType_YTPlayerView = 0,
 };
 
 @interface YHDTableViewController ()
@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, YHDMenuType)
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"API TEST";
+    self.navigationItem.title = @"API SAMPLES";
 }
 
 #pragma mark - Table view delegate
@@ -44,7 +44,7 @@ typedef NS_ENUM(NSInteger, YHDMenuType)
     YHDMenuType menuType = indexRow;
     
     switch (menuType) {
-        case YHDMenuType_XCDYouTubeKit:
+        case YHDMenuType_YTPlayerView:
             [self performSegueWithIdentifier:YHDSegueIdMainToYoutubeModal sender:self];
             break;
             
@@ -91,9 +91,9 @@ typedef NS_ENUM(NSInteger, YHDMenuType)
     NSString *result = nil;
     
     switch (menuType) {
-        case YHDMenuType_XCDYouTubeKit:
-            result = @"XCDYouTubeKit";
-            break;
+//        case YHDMenuType_XCDYouTubeKit:
+//            result = @"XCDYouTubeKit";
+//            break;
         case YHDMenuType_YTPlayerView:
             result = @"YTPlayerView";
             break;
