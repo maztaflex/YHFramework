@@ -9,21 +9,24 @@
 #import "YHDTableViewController.h"
 #import "YHViewController.h"
 
-#define YHDMenuListCount                                        2
+#define YHDMenuListCount                                        3
 
 #define YHDSegueIdMainToYoutubeModal                            @"sgMainToYoutubeModal"
-#define YHDSequeIdMainToURLSessionTask                          @"sgMainToURLSesstionTask"
+#define YHDSegueIdMainToURLSessionTask                          @"sgMainToURLSesstionTask"
+#define YHDSegueIdMainToImageCrop                               @"sgMainToImageCrop"
 
 typedef NS_ENUM(NSInteger, YHDMenuType)
 {
 //    YHDMenuType_XCDYouTubeKit = 0,
     YHDMenuType_YTPlayerView = 0,
     YHDMenuType_URLSessionTask,
+    YHDMenuType_ImageCrop,
 };
 
 @interface YHDTableViewController ()
 
-@property (nonatomic, strong) NSArray *menuList;
+@property (nonatomic, strong) NSArray                   *menuList;
+@property (strong, nonatomic) NSString                  *selectedMenuTitle;
 
 @end
 
@@ -51,15 +54,19 @@ typedef NS_ENUM(NSInteger, YHDMenuType)
             segueId = YHDSegueIdMainToYoutubeModal;
             break;
         case YHDMenuType_URLSessionTask:
-            segueId = YHDSequeIdMainToURLSessionTask;
+            segueId = YHDSegueIdMainToURLSessionTask;
+            break;
+        case YHDMenuType_ImageCrop:
+            segueId = YHDSegueIdMainToImageCrop;
             break;
         default:
             break;
     }
+    LogGreen(@"didSelect : %@",[self getMenuTitleWithType:menuType]);
+    
+    self.selectedMenuTitle = [self getMenuTitleWithType:menuType];
     
     [self performSegueWithIdentifier:segueId sender:self];
-    
-    LogGreen(@"didSelect : %@",[self getMenuTitleWithType:menuType]);
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -107,11 +114,22 @@ typedef NS_ENUM(NSInteger, YHDMenuType)
         case YHDMenuType_URLSessionTask:
             result = @"URLSessionTask";
             break;
+        case YHDMenuType_ImageCrop:
+            result = @"Image Crop";
+            break;
         default:
             break;
     }
     
     return result;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *destinationViewController = segue.destinationViewController;
+    LogGreen(@"self.selectedMenuTitle : %@",self.selectedMenuTitle);
+    
+    destinationViewController.title = self.selectedMenuTitle;
 }
 
 /*
